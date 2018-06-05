@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on("click", "#btn-add", function() {
+                var fname = $('input[name="firstname"]').val();
+                var lname = $('input[name="lastname"]').val();
+                var _add = '<table class="card"><td>' + fname + ' ' + lname + '<br> Click for description</td> </table>';
+                $('#card_holder').append(_add);
+            })
+
+            $(document).on("click", "#dynamic_btn", function() {
+                var descrip = $('textarea[name="description"]').val();
+                var show_desc = "hello"; //append display
+
+
+
+            })
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Contact Card</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form method="POST" class="form_card"></form>
+        <div id="div_form">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" placeholder="First Name" name="firstname"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" id="lastname" placeholder="Last Name" name="lastname"></td>
+                    </tr>
+                </tbody>
+                <table id="description_t">
+                    <tr>
+                        <td>Description:</td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="description" id="description" cols="33" rows="5">Enter description...</textarea></td>
+                    </tr>
+                </table>
+                <button type="button" id="btn-add" class="btn">Add User</button>
+
+            </table>
+        </div>
+        <div id="card_holder">
+            <table class="card">
+                <td>Hello World<br> Click for description</td>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

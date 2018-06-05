@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Callback Sample</title>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+	</head>
+	<body>
+		<script>
+
+			// function halfnum(x){
+			// 	alert(x / 2) ;
+			// 	return x/2;
+			// }
+
+			function num(a, callback){
+				callback(a);
+			}
+
+			num(10, function(x){
+				alert(x / 2);
+			});
+
+		</script>
+	</body>
+</html>

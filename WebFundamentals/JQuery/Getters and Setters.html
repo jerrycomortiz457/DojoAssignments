@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="enn">
+	<head>
+		<meta charset="utf-8">
+		<title>JQuery Basic</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// $('button').click(function(){
+				// 	var myText = $('#myParagraph').text();
+				// 	alert(myText);
+				// });
+
+				$('button').click(function(){
+					var myText = $('#myParagraph').text('Hello');
+				
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p id="myParagraph">The quick brown fox jumps over the lazy dog.</p>
+		<button>Click me to change the paragraph!</button>
+	</body>
+</html>

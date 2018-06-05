@@ -1,0 +1,40 @@
+td {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#wrapper {
+    /* background-color: aquamarine; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+}
+
+#description {
+    height: 150px;
+}
+
+textarea {
+    resize: none;
+}
+
+#description_t td {
+    text-align: left;
+}
+
+.nested {
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    /* background-color: aquamarine; */
+    align-items: end;
+}
+
+.card {
+    border: 1px solid black;
+    width: 200px;
+    height: 130px;
+}

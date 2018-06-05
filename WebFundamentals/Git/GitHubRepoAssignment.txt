@@ -1,0 +1,7 @@
+On Terminal:
+
+1. mkdir GitHubRepoAssignment
+2. cd GitHubRepoAssignment > git init
+3. touch readme.md > vim readme.md > "message" > :wq
+4. git status > git add .  > git commit -m "added readme.md" > git remote add origin https://github.com/jerrycomortiz457/GitHubRepoAssignment.git > git push -u origin master
+5.

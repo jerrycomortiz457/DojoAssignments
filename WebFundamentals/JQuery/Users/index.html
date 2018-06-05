@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#btn-add').click(function() {
+                var fname = $('input[name="firstname"]').val();
+                var lname = $('input[name="lastname"]').val();
+                var eadd = $('input[name="emailadd"]').val();
+                var cnum = $('input[name="contactno"]').val();
+                var _tr = '<tr><td>' + fname + '</td> <td>' + lname + '</td> <td>' + eadd + '</td> <td>' + cnum + '</td> </tr>';
+                $('#display').append(_tr);
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <table class="display_table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact Number</th>
+            </tr>
+        </thead>
+        <tbody id="display">
+
+        </tbody>
+    </table>
+    <div id="adduser">
+        <h1>Add User</h1>
+    </div>
+
+    <form method="POST" class="form-inline">
+        <div id="input">
+            <table id="form_table">
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input type="text" name="firstname" placeholder="First Name" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input type="text" name="lastname" placeholder="Last Name" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email Address:
+                    </td>
+                    <td>
+
+                        <input type="text" name="emailadd" placeholder="Email Address" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Contact No.:
+                    </td>
+                    <td>
+                        <input type="text" name="contactno" placeholder="Contact Number" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <button type="button" class="btn" id="btn-add">Add User</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.display_table {
+    border: 1px solid black;
+    text-align: left;
+    width: 500px;
+}
+
+#form_table td {
+    text-align: right;
+}
+
+#adduser {
+    width: 280px;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+}

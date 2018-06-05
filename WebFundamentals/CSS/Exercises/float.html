@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="float_exercise.css">
+    <title>Float and Clear Exercise</title>
+    <script>
+        $(document).ready(function() {
+            $(document).on("click", "#btn", function() {
+                var fname = $('input[name="firstname"]').val();
+                var lname = $('input[name="lastname"]').val();
+                var _tr = '<table class="card"><tr><thead><td><h2>' + fname + ' ' + lname + '</h2></td></thead></tr><tr><td>Click for description!</td></tr></table>';
+                // alert(fname + lname);
+                $('.cards').append(_tr);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="form">
+            <form method="POST" class="form_input">
+                <div class="div_left">
+                    <div class="names">First Name:
+                        <span><input type="text" name="firstname" id=" firstname" placeholder="First Name"></span></div>
+                    <div class="names">Last Name:
+                        <span><input type="text" name="lastname" id=" lastname" placeholder="Last Name"></span></div>
+                    <div class="names">Description:</div>
+                    <div class="names"><textarea placeholder="Enter description" name="description" id="description" cols="39" rows="7"></textarea></div>
+                    <div class="names"><button id="btn">Add User</button></div>
+                </div>
+                <div class="div_right" align="center">
+                    <div class="cards">
+                        <table class="card">
+                            <tr>
+                                <thead>
+                                    <td>
+                                        <h2>Fname Lname</h2>
+                                    </td>
+                                </thead>
+                            </tr>
+                            <tr>
+                                <td>Click for description!</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="enn">
+<head>
+	<meta charset="utf-8">
+	<title>JQuery Basic</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var dojo = ['dojo', 'mountain view', 'bootcamp'];
+			console.log(dojo);
+
+			$('a').click(function(){
+				alert('you are now leaving the page!');
+			})
+
+			$('#hide').click(function(){
+				$('p,a,#hide').hide();
+			})
+
+			$('#show').click(function(){
+				$('p,a,#hide').show();
+			})
+			
+			$('h3').hover(function(){
+				$('h4').slideToggle("slow");
+			})
+
+			$('#append').click(function(){
+				$('.result').append('<h4>Append done!</h4>');
+			})			
+					
+		});
+			
+	</script>
+</head>
+<body>
+	<div class="result"></div>
+	<p>The quick brown fox jumps over the lazy dog.</p>
+	<button id="show">Show</button>
+	<button id="hide">Hide</button>
+	<a href="http://www.google.com"> go to Google!</a>
+	<h3>JQuery v.1.1.0</h3>
+	<h4>JQuery v.1.1.1</h4>
+	<button id="append">Append</button>
+	<div class="result"></div>
+</body>
+</html>

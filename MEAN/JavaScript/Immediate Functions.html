@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Immediate Functions</title>
+	</head>
+	<body>
+		<script>
+			// (function (global) {
+			//    console.log( window );               // logs the window object
+			//    console.log( global );               // logs the window object, but faster!
+			// }) ( window ) ;
+			(function () {
+				var a = "Hi";
+				var b = 38;
+				function test() {
+				//some code here
+				}
+				function add() {
+				//some code here
+				}
+				test();
+			}());
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Event Handling</title>
+	</head>
+	<body>
+		<button id="someButton">This is Some Button</button>
+		<script>
+			var button = document.getElementById("someButton");
+			button.addEventListener("click", whatToDoOnClick);
+			function whatToDoOnClick() {
+				alert("Mada Mada Dane!");
+			}
+		</script>
+	</body>
+</html>

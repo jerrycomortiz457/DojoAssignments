@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Query</title>
+    <script type="text/javascript" src="DojoQuery.js"></script>
+    <style>
+        #btn {
+            height: 50px;
+            width: 100px;
+            border: 1px solid rgb(204, 201, 201);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Click</button>
+    <script type="text/javascript">
+        $Dojo('btn').click(() => {
+            console.log('Clicked!');
+        }).hover(() => {
+            console.log("ON")
+        }, () => {
+            console.log("OUT")
+        });
+    </script>
+</body>
+
+</html>

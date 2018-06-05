@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Library</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        var _ = {
+                map: function(list, callback, context) {
+                    return list.map(callback);
+                },
+                reduce: function(list, callback, memo, context) {
+                    return list.reduce(callback);
+                },
+                find: function(list, callback, context) {
+                    return list.find(callback);
+                },
+                filter: function(list, callback, context) {
+                    return list.filter(callback);
+                },
+                reject: function(list, callback) {
+                    return list.filter(callback)
+
+                }
+            }
+            //map
+        console.log("map");
+        var maps = _.map([1, 2, 3], function(num, y) {
+            return num * 3;
+        });
+        // var maps = _.map([[1, 2], [3, 4]], _.first);		
+        console.log(maps);
+        //reduce
+        console.log("reduce");
+        var sum = _.reduce([1, 2, 3], function(memo, num) {
+            return memo + num;
+        }, 0);
+        console.log(sum);
+        //find
+        console.log("find");
+        var even = _.find([1, 2, 3, 4, 5, 6], function(num) {
+            return num % 2 == 0;
+        });
+        console.log(even);
+        //filter
+        console.log("filter");
+        var evens = _.filter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], function(num) {
+            return num % 2 == 0;
+        });
+        console.log(evens);
+        //reject
+        console.log("reject");
+        var odds = _.reject([1, 2, 3, 4, 5, 6], function(num) {
+            return num % 2 == 1;
+        });
+        console.log(odds);
+    </script>
+</body>
+
+</html>
