@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advance</title>
+</head>
+
+<body>
+    <h1>.localStorage</h1>
+    <script type="text/javascript">
+        // var header = document.getElementsByTagName('h1')[0],
+        //     siteName;
+        // console.log(header)
+        // localStorage.setItem('siteName', 'My Update Site');
+        // siteName = localStorage.getItem('siteName');
+        // header.innerHTML = siteName;
+        // localStorage.removeItem('siteName');
+
+        // var siteName = 'My Site',
+        //     siteDescription = 'Another JS Site';
+        // localStorage.setItem('siteName', siteName);
+        // localStorage.setItem('siteDescription', siteDescription);
+
+        var header = document.getElementsByTagName('h1')[0],
+            siteData = {
+                siteName: 'My Site',
+                siteDescription: 'Another JS Site'
+            },
+            localData;
+
+        localStorage.setItem('siteData', JSON.stringify(siteData));
+        localData = JSON.parse(localStorage.getItem('siteData'));
+        console.log(localData);
+        console.log(localStorage.getItem('siteData'));
+        header.innerHTML = localData.siteName;
+    </script>
+</body>
+
+</html>
