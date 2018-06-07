@@ -7,38 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Promise Test</title>
     <script>
-        // var isMomHappy = true;
+        var isMomHappy = true;
 
-        // var willGetNewPhone = new Promise(
-        //     function(resolve, reject) {
-        //         if (isMomHappy) {
-        //             var phone = {
-        //                 brand: 'Samsung',
-        //                 color: 'black'
-        //             };
-        //             resolve(phone);
-        //             // console.log('promise granted!');
-        //         } else {
-        //             var reason = new Error('mom is not happy');
-        //             reject(reason);
-        //         }
-        //     }
-        // );
+        var willGetNewPhone = new Promise(
+            (resolve, reject) => {
+                if (isMomHappy) {
+                    var phone = {
+                        brand: 'Samsung',
+                        color: 'black'
+                    };
+                    resolve(phone);
+                    // console.log('promise granted!');
+                } else {
+                    var reason = new Error('mom is not happy');
+                    reject(reason);
+                }
+            }
+        );
 
-        // var askMom = function() {
-        //     willGetNewPhone
-        //         .then(function(fulfilled) {
-        //             console.log(fulfilled);
-        //         })
+        var askMom = function() {
+            willGetNewPhone
+                .then(function(fulfilled) {
+                    console.log(fulfilled);
+                })
 
-        //     .catch(function(error) {
-        //         console.log(error.message);
-        //     });
-        // };
+            .catch(function(error) {
+                console.log(error.message);
+            });
+        };
 
-        // askMom();
+        askMom();
 
-        var deferred = new Promise((resolve, reject) => {});
+        // var deferred = new Promise((resolve, reject) => {});
     </script>
 </head>
 
