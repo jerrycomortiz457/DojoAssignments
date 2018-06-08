@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ninja Class I</title>
+	</head>
+	<body>
+		<script>
+
+			//constructor
+			function Ninja(name, health) {
+				this.name = name;
+				this.health = health = 100;
+				var speed = speed = 3;
+				var strength = strength = 3;
+				//private stats
+				this.showSpeed = function() {
+					return speed;
+				}
+
+				this.showStrength = function() {
+					return strength;
+				}
+
+			}
+			//methods
+			Ninja.prototype.sayName = function () {
+				console.log("My ninja name is " + this.name + "!");
+				return this;
+			};
+
+			Ninja.prototype.showStats = function () {
+				this.showSpeed();
+				console.log("Name: " + this.name + "\nHealth: " + this.health + "\nSpeed: " + this.showSpeed() + "\nStrength: " + this.showStrength());
+				return this;
+			};
+
+			Ninja.prototype.drinkSake = function () {
+				this.health += 10;
+				return this;
+			};
+
+			Ninja.prototype.punch = function (opponent) {
+				if (opponent instanceof Ninja)
+				{
+					opponent.health -= 5;
+					console.log(opponent.name + " was punched by " + this.name + " and lost 5 health!");
+					return this;
+				}
+				else
+				{
+					console.log("Attack failed!");
+				}
+			};
+
+			Ninja.prototype.kick = function (opponent) {
+			if (opponent instanceof Ninja)
+				{
+					opponent.health -= 15;
+					console.log(opponent.name + " was kicked by " + this.name + " and lost 15 health!");
+					return this;
+				}
+				else
+				{
+					console.log("Attack failed!");
+				}
+			};
+
+
+			var blueNinja = new Ninja("Goemon");
+			var redNinja = new Ninja("Bill Gates");
+			var ninja1 = new Ninja("Hyabusa");
+			var box = new Object();
+			// ninja1.sayName();
+			// ninja1.drinkSake();			
+			// ninja1.drinkSake();			
+			// ninja1.showStats();
+			// ninja1.showStats();
+			// blueNinja.showStats();
+			// redNinja.showStats();
+			// ninja1.punch(blueNinja);
+			// ninja1.punch(blueNinja);
+			// ninja1.punch(blueNinja);
+			// ninja1.punch(blueNinja);
+			// ninja1.punch(blueNinja);
+			blueNinja.showStats();
+			blueNinja.kick(ninja1);
+			ninja1.showStats();
+			blueNinja.punch(box);
+
+
+
+
+
+
+
+		</script>
+
+	</body>
+</html>
