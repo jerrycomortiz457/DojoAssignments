@@ -9,6 +9,14 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).on("click", ".tb", function() {
+            var api = 'https://opentdb.com/api.php?amount=1&category=' + $(this).attr('id') + '&difficulty=' + $(this).attr('diff-alt-src') + '&type=multiple&encode=url3986';
+            var displayQuestion = function() {
+
+            };
+        });
+    </script>
 </head>
 
 <body>
@@ -36,37 +44,35 @@
             </div>
         </div>
         <div class="main">
-            <div class="tbox" id="1">
-                <h3 id="geo_easy">100</h3>
+            <div class="tb" id="22" diff-alt-src="easy">
+                <h3 id="points">100</h3>
             </div>
-            <div class="tbox" id="2">
-                <h3>100</h3>
+            <div class="tb" id="11" diff-alt-src="easy">
+                <h3 id="points">100</h3>
             </div>
-            <div class="tbox" id="3">
-                <h3>100</h3>
+            <div class="tb" id="17" diff-alt-src="easy">
+                <h3 id="points">100</h3>
             </div>
-            <div class="tbox" id="4">
-                <h3>200</h3>
+            <div class="tb" id="22" diff-alt-src="medium">
+                <h3 id="points">200</h3>
             </div>
-            <div class="tbox" id="5">
-                <h3>200</h3>
+            <div class="tb" id="11" diff-alt-src="medium">
+                <h3 id="points">200</h3>
             </div>
-            <div class="tbox" id="6">
-                <h3>200</h3>
+            <div class="tb" id="17" diff-alt-src="medium">
+                <h3 id="points">200</h3>
             </div>
-            <div class="tbox" id="7">
-                <h3>300</h3>
+            <div class="tb" id="22" diff-alt-src="hard">
+                <h3 id="points">300</h3>
             </div>
-            <div class="tbox" id="8">
-                <h3>300</h3>
+            <div class="tb" id="11" diff-alt-src="hard">
+                <h3 id="points">300</h3>
             </div>
-            <div class="tbox" id="9">
-                <h3>300</h3>
+            <div class="tb" id="17" diff-alt-src="hard">
+                <h3 id="points">300</h3>
             </div>
         </div>
     </div>
 </body>
 
 </html>
-
-"<input type="radio" id="geo_true" name="choice" value="true"><label for="geo_true">True</label><br><input type="radio" id="geo_false" name="choice" value="false"><label for="geo_flase">False</label>"

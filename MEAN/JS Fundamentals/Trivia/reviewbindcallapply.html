@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Review</title>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <button name="button">Click Me</button>
+    <script>
+        var customObject = {
+            name: 'Jerryco Ortiz',
+            onClick: function() {
+                console.log("I've been clicked!");
+                console.log(this.name);
+            }
+        }
+
+
+        $('button').click(customObject.onClick.bind(customObject));
+    </script>
+</body>
+
+</html>

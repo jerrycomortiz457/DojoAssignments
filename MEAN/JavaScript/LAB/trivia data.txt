@@ -1,0 +1,7 @@
+https://opentdb.com/api.php?amount=1&category=[category_num]&difficulty=[difficulty_type]&type=boolean&encode=url3986
+https://opentdb.com/api.php?amount=1&category=22&difficulty=medium&type=boolean&encode=url3986
+https://opentdb.com/api.php?amount=1&category=[cat_num]&difficulty=[diff_type]&type=multiple&encode=url3986
+
+geo = 22
+film = 11
+sci = 17
